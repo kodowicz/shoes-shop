@@ -276,9 +276,10 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 400px);
+  grid-row-gap: 50px;
 
   .text {
-    height: 50%;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -290,7 +291,7 @@ main {
 
   img {
     width: 100%;
-    height: 50%
+    height: 200px
   }
 
 }
@@ -298,7 +299,7 @@ main {
 footer {
   width: calc(100% - 10px);
   height: 50px;
-  margin: 40px auto 5px;
+  margin: 100px auto 5px;
   padding: 0 30px;
   border: $border;
   display: flex;
