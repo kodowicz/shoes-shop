@@ -1,0 +1,57 @@
+mixin figure (title, image)
+  li
+    figure
+      figcaption
+        span= title
+      img(src=image)
+
+mixin link (title, arrow)
+  span.link= title
+  if arrow
+    +arrow
+  
+mixin arrow
+  svg(class="arrow", viewBox="0 0 40 40", height="7", width="7")
+    g
+      polygon(points="32.2,20 12.2,39.6 7.8,35.1 23.2,20 7.8,4.9 12.2,0.4 ")
+
+header.header
+  button.button
+    .button-line
+    .button-line
+    .button-line
+
+  a.logo(href="#") Shoes
+  
+  .shop
+    span 0
+    
+  nav
+    .lists
+      ul.left-list
+        li.js-link
+          +link("New collection", "arrow")
+          ul.sublist.one
+            +figure("All shoes", "https://images.unsplash.com/photo-1457968867385-9f877f3f2bce?ixlib=rb-0.3.5&amp;s=de7780258e0e74e2b57c2432ad32e1ed&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80")
+            +figure("Women shoes", "https://images.unsplash.com/photo-1509418969973-c560ee8f02a0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6994bb7c8465c650c450b580b677e8e9&auto=format&fit=crop&w=1164&q=80")
+            +figure("Men shoes", "https://images.unsplash.com/photo-1512374382149-233c42b6a83b?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=d34d6f838187851833f639868ec9e18c&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60")
+            +figure("Running & Traning", "https://images.unsplash.com/photo-1537354773069-a2103a295ad9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=301189453a3167161829a7fbdfcb2bb1&auto=format&fit=crop&w=1050&q=80")
+            
+        li.js-link
+          +link("Permanent collection", "arrow")
+          
+          ul.sublist.two
+            +figure("All shoes", "https://images.unsplash.com/photo-1537024724388-a33d5832f2b2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a41f80e4b59b65d3c22ef0723be33f22&auto=format&fit=crop&w=400&q=80")
+            +figure("Women shoes", "https://images.unsplash.com/photo-1508721713313-60b1109e2d4b?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=a2e3c358d73249103bcd95e1c518d8f8&amp;auto=format&amp;fit=crop&amp;w=967&amp;q=80")
+            +figure("Men shoes", "https://images.unsplash.com/photo-1495557077419-2384a0150025?ixlib=rb-0.3.5&s=c9a3e974b6c8adbfefade0e704a890ac&auto=format&fit=crop&w=1114&q=80")
+            +figure("Running & Traning", "https://images.unsplash.com/photo-1520256862855-398228c41684?ixlib=rb-0.3.5&s=93bab99c9ff8608e8744c82b9413797e&auto=format&fit=crop&w=1050&q=80")
+        li
+          +link("Gifts")
+        
+      ul.right-list
+        li
+          +link("About")
+        li
+          +link("Help")
+        li
+          +link("My account")
