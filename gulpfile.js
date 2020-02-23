@@ -14,7 +14,7 @@ var pug = require('gulp-pug');
 function browserSync() {
   browsersync.init({
     server: {
-      baseDir: "./public"
+      baseDir: "./"
     }
   });
 }
@@ -32,7 +32,7 @@ function templates () {
     .pipe(pug({
       pretty: true
     }))
-    .pipe(gulp.dest('./public'))
+    .pipe(gulp.dest('./'))
     .pipe(browsersync.stream());
 }
 
